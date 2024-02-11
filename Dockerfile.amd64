@@ -1,5 +1,5 @@
 ARG NODE_VERSION=20.11.0
-FROM node:${NODE_VERSION}-bookworm AS node
+FROM node:${NODE_VERSION}-bookworm-slim AS node
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update
