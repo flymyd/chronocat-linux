@@ -50,6 +50,8 @@ jobs:
         context: .
         file: ${{ matrix.dockerfile }}
         push: true
-        tags: ${{ steps.meta.outputs.tags }}-${{ matrix.arch }}
+        tags: |
+          ${{ steps.meta.outputs.tags }}-${{ matrix.arch }}
         labels: ${{ steps.meta.outputs.labels }}
         build-args: ARCH=${{ matrix.arch }}
+
