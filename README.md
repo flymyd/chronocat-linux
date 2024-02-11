@@ -35,5 +35,13 @@ docker exec -it chronocat cat /root/.chronocat/config/chronocat.yml | grep token
 
 复制`Token`节点的值即可。
 
+### 自己尝试打包调试镜像
 
+```shell
+git clone https://github.com/flymyd/chronocat-linux.git
+cd chronocat-linux
+docker build -f Dockerfile.amd64 -t chronocat-linux .
+```
+
+ARM用户请将`amd64`更换为`arm64`。欢迎龙芯用户贡献对应的`Loongarch`版`Dockerfile`。
 
