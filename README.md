@@ -5,9 +5,19 @@
 
 ### 运行镜像
 
+如果你使用的是Intel/AMD/兆芯/海光/澜起津逮的CPU：
+
 ```shell
-docker run -d --name chronocat -p 16340:16340 -p 16530:16530 chronocat-linux:latest
+docker run -d --name chronocat -p 16340:16340 -p 16530:16530 flymyd114/chronocat-linux:latest-amd64
 ```
+
+否则请使用：
+
+```shell
+docker run -d --name chronocat -p 16340:16340 -p 16530:16530 flymyd114/chronocat-linux:latest-arm64
+```
+
+暂不支持龙芯CPU。
 
 ### 获取登录链接
 
